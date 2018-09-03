@@ -1,0 +1,59 @@
+{
+  "name": "@xq-stencil/node-jest-server",
+  "version": "1.0.2",
+  "description": "A library stencil based on node and test used jest",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">= 6"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./lib",
+    "babel": "babel src -d lib",
+    "babel:watch": "watch 'yarn babel' ./src",
+    "build": "yarn clean && yarn babel",
+    "lint": "eslint src",
+    "test": "jest --coverage --config config/jest.config.js",
+    "test:watch": "watch 'yarn test' ./src",
+    "security:check": "nsp check --reporter summary",
+    "release:git": "/bin/bash ./ci/git-release.sh",
+    "release:npm": "/bin/bash ./ci/npm-release.sh",
+    "release": "yarn release:git && yarn release:npm"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^5.4.0",
+    "eslint-plugin-jest": "^21.22.0",
+    "jest": "^23.5.0",
+    "nsp": "^3.2.1",
+    "watch": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xqstencils/node-jest-server.git"
+  },
+  "keywords": [
+    "lib",
+    "node",
+    "babel",
+    "jest",
+    "eslint",
+    "security",
+    "circleci"
+  ],
+  "author": "Cao Xiaoqi<xqcao@xqcao.com>",
+  "contributors": [
+    "Xiaoqi Cao"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xqstencils/node-jest-server/issues"
+  },
+  "homepage": "https://github.com/xqstencils/node-jest-server#readme"
+}

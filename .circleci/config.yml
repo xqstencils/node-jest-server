@@ -1,0 +1,72 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:6
+    working_directory: ~/node-jest-server
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install package dependencies
+          command: yarn install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+  test:
+    docker:
+      - image: circleci/node:6
+    working_directory: ~/node-jest-server
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: ESlint
+          command: yarn lint
+      - run:
+          name: Security Check
+          command: yarn security:check
+      - run:
+          name: Test
+          command: yarn test
+
+  release:
+    docker:
+      - image: circleci/node:6
+    working_directory: ~/node-jest-server
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Set Config
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - run:
+          name: Compile
+          command: yarn build
+      - run:
+          name: Git release
+          command: yarn release:git
+      - run:
+          name: Npm release
+          command: yarn release:npm
+
+workflows:
+  version: 2
+  build_test_release:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - release:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
