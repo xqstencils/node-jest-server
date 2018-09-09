@@ -1,6 +1,6 @@
 {
   "name": "@xq-stencil/node-jest-server",
-  "version": "1.0.2",
+  "version": "0.1.0",
   "description": "A library stencil based on node and test used jest",
   "main": "lib/index.js",
   "engines": {
@@ -10,29 +10,43 @@
     "lib"
   ],
   "scripts": {
-    "clean": "rm -rf ./lib",
-    "babel": "babel src -d lib",
-    "babel:watch": "watch 'yarn babel' ./src",
-    "build": "yarn clean && yarn babel",
+    "clean": "rm -rf ./dist",
+    "build:pack": "webpack --config config/webpack.config.js",
+    "build:pack:watch": "watch 'yarn build:pack' ./src",
+    "build": "yarn clean && yarn build:pack",
     "lint": "eslint src",
     "test": "jest --coverage --config config/jest.config.js",
     "test:watch": "watch 'yarn test' ./src",
     "security:check": "nsp check --reporter summary",
     "release:git": "/bin/bash ./ci/git-release.sh",
     "release:npm": "/bin/bash ./ci/npm-release.sh",
-    "release": "yarn release:git && yarn release:npm"
+    "release": "yarn release:git && yarn release:npm",
+    "start": "webpack-dev-server --config config/webpack.config.dev.js --open"
   },
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^1.0.0",
     "eslint": "^5.4.0",
     "eslint-plugin-jest": "^21.22.0",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.5.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
     "nsp": "^3.2.1",
-    "watch": "^1.0.2"
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "watch": "^1.0.2",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8",
+    "webpack-merge": "^4.1.4"
   },
   "repository": {
     "type": "git",
