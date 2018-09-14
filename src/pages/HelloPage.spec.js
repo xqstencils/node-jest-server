@@ -10,7 +10,7 @@ describe('HelloPage', () => {
 
     it('should render a hello world message', () => {
       let message = helloPage.render('World');
-      expect(message.innerText).toBe('Hello: World');
+      expect(message.textContent).toBe('Hello: World');
     });
   });
 });
