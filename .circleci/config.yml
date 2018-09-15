@@ -43,17 +43,11 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: Set Config
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-      - run:
           name: Compile
           command: yarn build
       - run:
           name: Git release
-          command: yarn release:git
-      - run:
-          name: Npm release
-          command: yarn release:npm
+          command: yarn release
 
 workflows:
   version: 2

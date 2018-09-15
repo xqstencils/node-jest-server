@@ -1,7 +1,7 @@
 {
   "name": "@xq-stencil/node-jest-server",
   "version": "0.1.0",
-  "description": "A library stencil based on node and test used jest",
+  "description": "A simple server stencil based on node and used jest for test",
   "main": "lib/index.js",
   "engines": {
     "node": ">= 6"
@@ -18,9 +18,7 @@
     "test": "jest --coverage --config config/jest.config.js",
     "test:watch": "watch 'yarn test' ./src",
     "security:check": "nsp check --reporter summary",
-    "release:git": "/bin/bash ./ci/git-release.sh",
-    "release:npm": "/bin/bash ./ci/npm-release.sh",
-    "release": "yarn release:git && yarn release:npm",
+    "release": "/bin/bash ./ci/release.sh",
     "start": "webpack-dev-server --config config/webpack.config.dev.js --open"
   },
   "dependencies": {},
@@ -53,10 +51,10 @@
     "url": "git+https://github.com/xqstencils/node-jest-server.git"
   },
   "keywords": [
-    "lib",
     "node",
     "babel",
     "jest",
+    "server",
     "eslint",
     "security",
     "circleci"

@@ -17,7 +17,7 @@ git checkout -b tmp-release
 
 yarn install
 yarn build
-git add -f lib/
+git add -f dist/
 git commit -m "Release v$CURRENT_VERSION"
 git tag "v$CURRENT_VERSION"
 git push --tags
