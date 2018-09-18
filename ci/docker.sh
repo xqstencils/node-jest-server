@@ -1,7 +1,7 @@
 #! bin/bash
 set -e -u
 
-REPOSITORY = xqstencils/node-jest-server
+REPOSITORY='xqstencils/node-jest-server'
 VERSION=`cat package.json | jq -r .version`
 
 echo `env`
