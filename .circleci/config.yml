@@ -56,8 +56,8 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: Compile
-          command: yarn docker
+          name: Docker build
+          command: bash ./ci/docker.sh
 
 workflows:
   version: 2
