@@ -1,6 +1,6 @@
 {
   "name": "@xq-stencil/node-jest-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple server stencil based on node and used jest for test",
   "main": "lib/index.js",
   "engines": {
@@ -19,6 +19,7 @@
     "test:watch": "watch 'yarn test' ./src",
     "security:check": "nsp check --reporter summary",
     "release": "/bin/bash ./ci/release.sh",
+    "docker": "/bin/bash ./ci/docker.sh",
     "start": "webpack-dev-server --config config/webpack.config.dev.js --open"
   },
   "dependencies": {},

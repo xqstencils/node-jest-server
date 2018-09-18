@@ -49,9 +49,19 @@ jobs:
           name: Git release
           command: yarn release
 
+  docker:
+    machine: true
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Compile
+          command: yarn docker
+
 workflows:
   version: 2
-  build_test_release:
+  build-test-release-docker:
     jobs:
       - build
       - test:
@@ -64,3 +74,9 @@ workflows:
             branches:
               only:
                 - master
+      - docker:
+          requires:
+            - release
+          filters:
+            tags:
+              only: /^v.*/
