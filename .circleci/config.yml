@@ -59,6 +59,7 @@ jobs:
 
   docker:
     machine: true
+    working_directory: ~/node-jest-server
     steps:
       - checkout
       - restore_cache:
