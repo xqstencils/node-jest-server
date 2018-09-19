@@ -55,7 +55,7 @@ jobs:
           key: app-build-cache
       - run:
           name: Git release
-          command: bash ./ci/docker.sh
+          command: bash ./ci/release.sh
 
   docker:
     machine: true
