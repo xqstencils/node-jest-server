@@ -30,9 +30,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys:
-            - dependency-cache-{{ checksum "package.json" }}
-            - app-build-cache
+          key: dependency-cache-{{ checksum "package.json" }}
+      - restore_cache:
+          key: app-build-cache
       - run:
           name: ESlint
           command: yarn lint
@@ -50,9 +50,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys:
-            - dependency-cache-{{ checksum "package.json" }}
-            - app-build-cache
+          key: dependency-cache-{{ checksum "package.json" }}
+      - restore_cache:
+          key: app-build-cache
       - run:
           name: Git release
           command: yarn release
@@ -62,9 +62,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys:
-            - dependency-cache-{{ checksum "package.json" }}
-            - app-build-cache
+          key: dependency-cache-{{ checksum "package.json" }}
+      - restore_cache:
+          key: app-build-cache
       - run:
           name: Docker build
           command: bash ./ci/docker.sh
