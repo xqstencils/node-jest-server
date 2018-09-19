@@ -4,8 +4,6 @@ set -e -u
 REPOSITORY='xqstencils/node-jest-server'
 VERSION=`cat package.json | jq -r .version`
 
-echo `env`
-
 echo 'Login to docker registry'
 docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
 
