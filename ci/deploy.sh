@@ -15,7 +15,7 @@ docker tag ${APP_NAME}:latest registry.heroku.com/${HEROKU_APP_NAME}/web
 echo 'Push image'
 docker push registry.heroku.com/${HEROKU_APP_NAME}/web
 
-echo 'Push code into heroku'
-git push https://heroku:$HEROKU_API_KEY@git.heroku.com/${HEROKU_APP_NAME}.git master
+echo 'Deploy app into heroku'
+heroku container:release web --app=${HEROKU_APP_NAME}
 
 echo "Deploy docker image to heroku"
