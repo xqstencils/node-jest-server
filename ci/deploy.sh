@@ -16,6 +16,7 @@ echo 'Push image'
 docker push registry.heroku.com/${HEROKU_APP_NAME}/web
 
 echo 'Deploy app into heroku'
+heroku update
 heroku container:release web --app=${HEROKU_APP_NAME}
 
 echo "Deploy docker image to heroku"
