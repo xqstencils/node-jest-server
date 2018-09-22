@@ -1,0 +1,7 @@
+build:
+  languages:
+    - nodejs
+  config:
+    NODE_ENV=development yarn build
+run:
+  web: NODE_ENV=production yarn start
