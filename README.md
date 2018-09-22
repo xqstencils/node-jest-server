@@ -3,11 +3,12 @@ This is a stencil for basic server base on node and jest.
 
 ## Current Status:
 
-[![NPM Version](https://img.shields.io/npm/v/@xq-stencil/node-jest-server.svg)](https://npmjs.org/package/@xq-stencil/node-jest-server)
-[![NPM Downloads](https://img.shields.io/npm/dm/@xq-stencil/node-jest-server.svg)](https://npmjs.org/package/@xq-stencil/node-jest-server)
+[![Ubuntu 14.04](https://img.shields.io/badge/ubuntu-14.04-brightgreen.svg)]()
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)]()
+[![Docker Pulls](https://img.shields.io/docker/pulls/xqdocker/ubuntu-oracle-java.svg)](https://hub.docker.com/r/xqdocker/ubuntu-oracle-java/)
+[![Docker Stars](https://img.shields.io/docker/stars/xqdocker/ubuntu-oracle-java.svg)](https://hub.docker.com/r/xqdocker/ubuntu-oracle-java/)
+[![Docker image](https://images.microbadger.com/badges/image/xqdocker/ubuntu-oracle-java.svg)](https://microbadger.com/images/xqdocker/ubuntu-oracle-java)
 [![Build Status](https://circleci.com/gh/xqstencils/node-jest-server.svg?style=svg)](https://circleci.com/gh/xqstencils/node-jest-server)
-
-[![NPM](https://nodei.co/npm/@xq-stencil/node-jest-server.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@xq-stencil/node-jest-server/)
 
 ## Features:
 

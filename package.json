@@ -1,6 +1,6 @@
 {
   "name": "@xq-stencil/node-jest-server",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "A simple server stencil based on node and used jest for test",
   "main": "lib/index.js",
   "engines": {
@@ -18,9 +18,13 @@
     "test": "jest --coverage --config config/jest.config.js",
     "test:watch": "watch 'yarn test' ./src",
     "security:check": "nsp check --reporter summary",
-    "start": "webpack-dev-server --config config/webpack.config.dev.js --open"
+    "start": "node server.js",
+    "start:dev": "webpack-dev-server --config config/webpack.config.dev.js --open"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.1"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
