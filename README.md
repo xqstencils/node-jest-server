@@ -19,6 +19,8 @@ This is a stencil for basic server base on node and jest.
 * Support ESlint to check the code.
 * Support Jest to test your code.
 * Support Nsp to do security check for the dependencis.
+* Support Build docker image and push to docker hub.
+* Support Deploy app to Heroku.
 
 ## Development:
 
@@ -27,47 +29,47 @@ This is a stencil for basic server base on node and jest.
 Clone this stencil and replace `@xq-stencil/node-jest-server` with your package name.
 
 ```
-$ git clone git@github.com:xqstencils/node-jest-server.git
+$> git clone git@github.com:xqstencils/node-jest-server.git
 ```
 
 ### Install dependencies
 
 ```
-$ yarn install
+$> yarn install
 ```
 
 ### Compile code
 
 ```
-$ yarn babel
+$> yarn babel
 # or run babel in watch mode
-$ yarn babel:watch
+$> yarn babel:watch
 ```
 
 ### Generate distribution code
 
 ```
-$ yarn build
+$> yarn build
 ```
 
 ### Linting
 
 ```
-$ yarn lint
+$> yarn lint
 ```
 
 ### Testing
 
 ```
-$ yarn test
+$> yarn test
 # or run the test in watch mode
-$ yarn test:watch
+$> yarn test:watch
 ```
 
 ### Security check
 
 ```
-$ yarn security:check
+$> yarn security:check
 ```
 
 ### Setup CI
@@ -76,10 +78,10 @@ $ yarn security:check
 * Setup the ci into circleci site.
 
 
-### Publish your package
+### Start in local
 
 ```
-$ yarn release
+$> yarn start
 ```
 
 ## License
