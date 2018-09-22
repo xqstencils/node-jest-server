@@ -3,11 +3,12 @@ This is a stencil for basic server base on node and jest.
 
 ## Current Status:
 
-[![Ubuntu 14.04](https://img.shields.io/badge/ubuntu-14.04-brightgreen.svg)]()
+[![Alpine 3.7](https://img.shields.io/badge/alpine-3.7-brightgreen.svg)]()
+[![Nginx 1.14](https://img.shields.io/badge/nginx-1.14-brightgreen.svg)]()
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)]()
-[![Docker Pulls](https://img.shields.io/docker/pulls/xqdocker/ubuntu-oracle-java.svg)](https://hub.docker.com/r/xqdocker/ubuntu-oracle-java/)
-[![Docker Stars](https://img.shields.io/docker/stars/xqdocker/ubuntu-oracle-java.svg)](https://hub.docker.com/r/xqdocker/ubuntu-oracle-java/)
-[![Docker image](https://images.microbadger.com/badges/image/xqdocker/ubuntu-oracle-java.svg)](https://microbadger.com/images/xqdocker/ubuntu-oracle-java)
+[![Docker Pulls](https://img.shields.io/docker/pulls/xqstencils/node-jest-server.svg)](https://hub.docker.com/r/xqstencils/node-jest-server/)
+[![Docker Stars](https://img.shields.io/docker/stars/xqstencils/node-jest-server.svg)](https://hub.docker.com/r/xqstencils/node-jest-server/)
+[![Docker image](https://images.microbadger.com/badges/image/xqstencils/node-jest-server.svg)](https://microbadger.com/images/xqstencils/node-jest-server)
 [![Build Status](https://circleci.com/gh/xqstencils/node-jest-server.svg?style=svg)](https://circleci.com/gh/xqstencils/node-jest-server)
 
 ## Features:
