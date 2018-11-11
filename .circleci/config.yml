@@ -34,11 +34,14 @@ jobs:
       - restore_cache:
           key: app-build-cache
       - run:
+          name: Upgrade yarn
+          command: sudo npm install --global yarn
+      - run:
           name: ESlint
           command: yarn lint
       - run:
           name: Security Check
-          command: yarn security:check
+          command: yarn audit
       - run:
           name: Test
           command: yarn test
