@@ -84,6 +84,19 @@ $> yarn audit
 $> yarn start
 ```
 
+### Start with docker
+
+```sh
+$> docker pull xqstencils/node-jest-server
+$> docker run --name node-jest-server -d -p 80:80 xqstencils/node-jest-server
+```
+
+### Access the online site
+
+```sh
+$> open https://node-jest-server.herokuapp.com
+```
+
 ## License
 
 node-jest-server is released under the [MIT license](https://github.com/xqstencils/node-jest-server/blob/master/LICENSE).
